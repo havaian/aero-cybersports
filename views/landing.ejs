@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aero</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+</head>
+<body>
+
+    <!-- <div id="black-damper">
+
+    </div>
+
+    <div id="greeting-1">
+        <h2>
+            Если ты зашел на этот сайт
+        </h2>
+    </div>
+    <div id="greeting-2">
+        <h2>
+            значит ты
+        </h2>
+    </div>
+    <div id="greeting-3">
+        <h2>
+            любишь рубиться в игры
+        </h2>
+    </div>
+    <div id="greeting-4">
+        <h2>
+            умеешь побеждать
+        </h2>
+    </div>
+    <div id="greeting-5">
+        <h2>
+            и играешь только ради того
+        </h2>
+    </div>
+    <div id="greeting-6">
+        <h2>
+            чтобы разносить своих оппонентов в клочья...
+        </h2>
+    </div>
+    <div id="greeting-7">
+        <h2>
+            В таком случае
+        </h2>
+    </div>
+    <div id="greeting-8">
+        <h2>
+            у нас для тебя приятные новости
+        </h2>
+    </div> -->
+
+    <img id="aero-logo" src="logo.png" alt="">
+
+    <video src="/aero-vids/videoplayback.mp4" poster="/aero-vids/videoplayback.png" preload="auto" id="video-top-mid"></video>
+
+    <div class="tournaments-section">
+
+        <div class="changeover">
+
+            <div class="all-tours">
+                <input type="radio" name="all-tours" type="hidden" id="all-tours-input">
+                <button id="all-tours">
+                    <label for="all-tours">все турниры</label>
+                </button>
+            </div>
+            
+            <div class="tournament-info">
+                <input type="radio" name="tournament-info" type="hidden" id="current-tournament-input">
+                <button id="current-tournament">
+                    <label for=tournament-info">текущий турнир</label>
+                </button>
+            </div>
+
+        </div>
+
+        <div class="tournaments">
+
+            <div class="all-tournaments">
+
+                <div class="tournament">
+                    <h2 class="tournament-name">
+                        Uzbekistan Dota Champions Cup
+                    </h2>
+
+                    <p class="tournament-info">
+                        The Uzbekistan Dota Chamions Cup is the big epic tournament, where Dota teams from all over the Uzbekistan can join the deadly fight to declare their dominance among everyone else.
+                    </p>
+
+                    <div class="tournament-details">
+                        <p class="tournament-dates">
+                            30.07 <br> - <br> <span> 30.08 </span>
+                        </p>
+                        <p class="tournament-number-of-teams">
+                            16 <br> <br> <span> teams </span>
+                        </p>
+                        <p class="tournament-prize-pool">
+                            Prize pool <br> <br> <span> $1000000000 </span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="tournament">
+                    <h2 class="tournament-name">
+                        Uzbekistan Dota Champions Cup
+                    </h2>
+
+                    <p class="tournament-info">
+                        The Uzbekistan Dota Chamions Cup is the big epic tournament, where Dota teams from all over the Uzbekistan can join the deadly fight to declare their dominance among everyone else.
+                    </p>
+
+                    <div class="tournament-details">
+                        <p class="tournament-dates">
+                            30.07 <br> - <br> <span> 30.08 </span>
+                        </p>
+                        <p class="tournament-number-of-teams">
+                            16 <br> <br> <span> teams </span>
+                        </p>
+                        <p class="tournament-prize-pool">
+                            Prize pool <br> <br> <span> $1000000000 </span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="current-tournament-section" id="current-tournament-section">
+
+                <div class="c-t-s-wrapper">
+                    
+                    <h2 class="current-tournament-name">
+                        Uzbekistan Dota Champions Cup
+                    </h2>
+
+                    <p class="current-tournament-info">
+                        The Uzbekistan Dota Chamions Cup is the big epic tournament, where Dota teams from all over the Uzbekistan can join the deadly battle to declare their supremacy over any other player of the region. Globally famous teams like <span> Team Secret </span>, <span> OG </span>, <span> Team Liquid </span>, <span> Evil Geniuses </span>, <span> PSG.LGD </span>, <span> Virtus.Pro </span>, will also join the event as competitors. This event will be held online in order to prevent undesired cases of infections among players and spectators, due to the current situation.
+                    </p>
+
+                    <div class="current-tournament-details">
+                        <p class="current-tournament-dates">
+                            30.07 <br> - <br> <span> 30.08 </span>
+                        </p>
+                        <p class="current-tournament-number-of-teams">
+                            16 <br> <br> <span> teams </span>
+                        </p>
+                        <p class="current-tournament-prize-pool">
+                            Prize pool <br> <br> <span> $1000000000 </span>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    
+
+    <div id="add-user">
+
+        <p id="add-user-title">Registration <span> ↓ </span></p>
+
+        <form class="add-user" action="/" method="post" autocomplete="off">
+
+            <div>
+                <input type="text" name="name" id="input-name" min="3" max="30" required>
+                <label for="name" id="label-name" class="add-user-input-label-1">
+                    <span class="input-text-wrapper">Name</span>
+                </label>
+            </div>
+
+            <div>
+                <input type="text" name="email" id="input-email" min="5" max="255" required>
+                <label for="email" id="label-email" class="add-user-input-label-2">
+                    <span class="input-text-wrapper">Email</span>
+                </label>
+            </div>
+
+            <div>
+                <input type="text" name="phone" id="input-phone" min="5" max="15" required>
+                <label for="phone" id="label-phone" class="add-user-input-label-3">
+                    <span class="input-text-wrapper">Phone</span>
+                </label>
+            </div>
+
+            <button>Submit</button>
+
+        </form>
+
+    </div>
+
+    
+
+    <div class="about-aero-team">
+
+        <div class="aero-email">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aerocybersport@gmail.com" target="_blank" rel="noopener noreferrer">
+                <span>
+                    <i class="far fa-envelope"></i>
+                </span>
+                <!-- icon for hover, is regular <i class="far fa-envelope-open"></i> -->
+                <!-- icon for hover, is solid <i class="fas fa-envelope-open-text"></i> -->
+            </a>
+        </div>
+
+        <div class="aero-tg">
+            <a href="https://t.me/aero_cybersport" target="_blank" rel="noopener noreferrer">
+                <span>
+                    <!-- this icon is regular --> <i class="fab fa-telegram-plane"></i>
+                </span>
+                <!-- this icon is solid <i class="fab fa-telegram"></i> -->
+            </a>                
+        </div>
+
+        <div class="aero-inst">
+            <a href="https://www.instagram.com/aero_cybersport/" target="_blank" rel="noopener noreferrer">
+                <span>
+                        <!-- this icon is regular --> <i class="fab fa-instagram"></i>
+                </span>
+                <!-- this icon is solid  <i class="fab fa-instagram-square"></i> -->
+            </a>
+        </div>
+
+    </div>
+
+    <div class="side-pictures">
+        
+        <div class="pictures-top">
+
+            <div class="picture-top-left">
+                <img src="/PNGs/dota-left/sexy_lina.png" alt="">
+            </div>
+
+            <div class="picture-top-right">
+                <img src="/PNGs/dota-right/anti-creep.png" alt="">
+            </div>
+
+        </div>
+
+        <div class="pictures-mid">
+
+            <div class="picture-mid-left">
+                <img src="/PNGs/cs-left/ct-left.png" alt="">
+            </div>
+
+            <div class="picture-mid-right">
+                <img src="/PNGs/cs-right/tt-right 2.png" alt="">
+            </div>
+
+        </div>
+
+        <div class="pictures-bot">
+
+            <div class="picture-bot-mid">
+                <img src="/kb_logo.png" alt="">
+            </div>
+
+            <div class="picture-bot-left">
+                <img src="/PNGs/mid/pupk-left-part.png" alt="">
+            </div>
+
+            <div class="picture-bot-right">
+                <img src="/PNGs/mid/pupk-right-part.png" alt="">
+            </div>
+            
+        </div>
+
+    </div>
+
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous">
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.js">
+</script>
+
+<script>
+
+var $polystarTL = $('#video-top-mid');
+
+$polystarTL.on('mouseenter focus', function () {
+    $polystarTL.get(0).play();
+});
+
+$polystarTL.on('mouseout blur', function () {
+    $polystarTL.get(0).pause();
+});
+
+const tours = document.querySelector('.all-tournaments')
+const tour = document.querySelector('#current-tournament-section')
+const greeting1 = document.querySelector('#greeting-1')
+const greeting2 = document.querySelector('#greeting-2')
+
+$(document).ready(function() {
+
+    function showAllTours() {
+        tours.style.opacity = '1';
+        tours.style.transform = 'translateY(0%)';
+    }
+
+    function showCurrentTour() {
+        tour.style.opacity = '1';
+        tour.style.transform = 'translateY(0%)';
+    }
+
+    function hideAllTours() {
+        tours.style.opacity = '0';
+        tours.style.transform = 'translateY(-100%)';
+    }
+
+    function hideCurrentTour() {
+        tour.style.opacity = '0';
+        tour.style.transform = 'translateY(-100%)';
+    }
+
+    function hideGreeting1() {
+        $('#greeting-1').fadeOut()
+    }
+    
+    function showGreeting2() {
+        $('#greeting-2').fadeIn();
+    }
+
+    function hideGreeting2() {
+        $('#greeting-2').fadeOut();
+    }
+
+    function showGreeting3() {
+        $('#greeting-3').fadeIn();
+    }
+
+    function hideGreeting3() {
+        $('#greeting-3').fadeOut();
+    }
+
+    function showGreeting4() {
+        $('#greeting-4').fadeIn();
+    }
+
+    function hideGreeting4() {
+        $('#greeting-4').fadeOut();
+    }
+
+    function showGreeting5() {
+        $('#greeting-5').fadeIn();
+    }
+
+    function hideGreeting5() {
+        $('#greeting-5').fadeOut();
+    }
+
+    function showGreeting6() {
+        $('#greeting-6').fadeIn();
+    }
+
+    function hideGreeting6() {
+        $('#greeting-6').fadeOut();
+    }
+
+    function showGreeting7() {
+        $('#greeting-7').fadeIn();
+    }
+
+    function hideGreeting7() {
+        $('#greeting-7').fadeOut();
+    }
+
+    function showGreeting8() {
+        $('#greeting-8').fadeIn();
+    }
+
+    function hideGreeting8() {
+        $('#greeting-8').fadeOut();
+    }
+
+    function hideDamper() {
+        $('#black-damper').fadeOut();
+    }
+
+    function showLogo() {
+        $('#aero-logo').fadeIn()
+    }
+
+    $('#greeting-1').fadeIn();
+
+    setTimeout(hideGreeting1, 3020);
+
+    setTimeout(showGreeting2, 3025);
+    setTimeout(hideGreeting2, 5020);
+
+    setTimeout(showGreeting3, 5025);
+    setTimeout(hideGreeting3, 7020);
+
+    setTimeout(showGreeting4, 7025);
+    setTimeout(hideGreeting4, 9020);
+
+    setTimeout(showGreeting5, 9025);
+    setTimeout(hideGreeting5, 11020);
+
+    setTimeout(showGreeting6, 11025);
+    setTimeout(hideGreeting6, 13520);
+
+    setTimeout(showGreeting7, 13525);
+    setTimeout(hideGreeting7, 15520);
+
+    setTimeout(showGreeting8, 15525);
+    setTimeout(hideGreeting8, 17520);
+
+    setTimeout(hideDamper, 17500);
+    
+    setTimeout(showLogo, 17500)
+
+    $('#all-tours-input').addClass('selected');
+    showAllTours();
+
+    $('#all-tours').click(function() {
+        $('#all-tours-input').addClass('selected');
+        $('#current-tournament-input').removeClass('selected');
+
+        hideCurrentTour();
+        showAllTours();
+
+        $('#current-tournament-section').hide();
+        $('.all-tournaments').show();
+    })
+
+    $('#current-tournament').click(function() {
+
+        $('#all-tours-input').removeClass('selected');
+        $('#current-tournament-input').addClass('selected');
+
+        hideAllTours();
+        showCurrentTour();
+
+        $('.all-tournaments').hide();
+        $('#current-tournament-section').show();
+    })
+
+});
+
+</script>
+
+</html>
