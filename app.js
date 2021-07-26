@@ -7,7 +7,7 @@ const bodyParser = require('body-parser')
 const { render } = require('ejs')
 
 mongoose.connect(process.env.url, { useNewUrlParser: true,  useCreateIndex: true, useUnifiedTopology: true })
-    .then((result) => console.log('connected to mongodb'), app.listen(process.env,PORT || 27017))
+    .then((result) => console.log('connected to mongodb'), app.listen(8080))
     .catch((err) => console.log(err))
 
 const db = mongoose.connection
