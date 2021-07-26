@@ -1,0 +1,786 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+:root {
+    --gradient-color-0: #fff;
+    --gradient-color-1: #ffcc40;
+    --gradient-color-2: #f5aa22;
+    --gradient-color-3: #fa9011;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    background-color: #000;
+}
+
+#greeting-1 h2::selection, 
+#greeting-2 h2::selection, 
+#greeting-3 h2::selection, 
+#greeting-4 h2::selection, 
+#greeting-5 h2::selection, 
+#greeting-6 h2::selection, 
+#greeting-7 h2::selection, 
+#greeting-8 h2::selection, 
+#greeting-9 h2::selection {
+    color: white;
+    background: black;
+}
+
+*::selection {
+    color: black;
+    background: var(--gradient-color-3);
+}
+
+body {
+    font-family: 'IBM Plex Mono', cursive;;
+}
+
+#black-damper {
+    position: absolute;
+    width: 100%;
+    height: 230%;
+    background: black;
+    z-index: 990;
+}
+
+#greeting-1, 
+#greeting-2, 
+#greeting-3, 
+#greeting-4, 
+#greeting-5, 
+#greeting-6, 
+#greeting-7, 
+#greeting-8, 
+#greeting-9 {
+    position: absolute;
+    width: 100%;
+    height: 400%;
+    background: black;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    
+    display: none;
+}
+
+#greeting-1 {
+    z-index: 999;
+}
+
+#greeting-2 {
+    z-index: 998;
+}
+
+#greeting-3 {
+    z-index: 997;
+}
+
+#greeting-4 {
+    z-index: 996;
+}
+
+#greeting-5 {
+    z-index: 995;
+}
+
+#greeting-6 {
+    z-index: 994;
+}
+
+#greeting-7 {
+    z-index: 993;
+}
+
+#greeting-8 {
+    z-index: 992;
+}
+
+#greeting-9 {
+    z-index: 991;
+}
+
+#greeting-1 h2, 
+#greeting-2 h2, 
+#greeting-3 h2, 
+#greeting-4 h2, 
+#greeting-6 h2, 
+#greeting-5 h2, 
+#greeting-8 h2, 
+#greeting-7 h2, 
+#greeting-9 h2 {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 25%;
+    position: fixed;
+}
+
+#aero-logo {
+    margin-left: 2%;
+    height: 250px;
+    width: 250px;
+    position: fixed;
+    z-index: 10000;
+    background: none;
+
+    display: none;
+}
+
+#video-top-mid {
+    top: 0%;
+    position: relative;
+    width: 100%;
+    height: 900px;
+    transition: all 1000ms ease;
+    filter: grayscale(1);
+}
+
+#video-top-mid:hover {
+    transition: all 1000ms ease;
+    filter: none;
+}
+
+.about-us {
+    color: white;
+}
+
+.about-us h3 {
+    font-size: 32;
+    font-family: 'Marck Script', cursive;
+}
+
+.tournaments-section {
+    margin-top: 100px;
+    height: 400px;
+    display: grid;
+    justify-content: space-around;
+    z-index: 100;
+}
+
+.changeover {
+    position: relative;
+    display: flex;
+    max-width: 80%;
+    margin-left: -77%;
+    margin-bottom: 100px;
+    padding: 1rem;
+    padding: 3px;
+    transition: all 300ms ease-in-out;
+    transform: translateX(100%);
+    z-index: inherit;
+}
+
+.changeover input {
+    appearance: none;
+}
+
+.changeover button {
+    height: 50px;
+    width: 200px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #000;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.changeover button label {
+    color: white;
+    transition: all 300ms ease-in-out;
+    pointer-events: none;
+}
+
+.changeover button:hover {
+    background: #fa9011;
+    border-bottom: 2px solid #fa9011;
+    transition: all 300ms ease-in-out;
+}
+
+.changeover input.selected + button {
+    border-bottom: 2px solid #fa9011;
+    transition: all 300ms ease-in-out;
+}
+
+.changeover button:hover label {
+    background: #fa9011;
+    color: white;
+    transition: all 300ms ease-in-out;
+}
+
+.changeover input.selected + button label {
+    color: white;
+    transition: all 300ms ease-in-out;
+}
+
+.all-tournaments {
+    display: grid;
+    grid-template-columns: 500px;
+    grid-template-rows: 320px 320px;
+    transition: all 300ms ease-in-out;
+    z-index: inherit;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.tournament {
+    z-index: 100;
+    margin: 0 50px 50px 50px;
+    color: white;
+    transform: translateX(0%);
+    transition: all 300ms ease-in-out;
+}
+
+.tournament-name::selection,
+.tournament-info::selection,
+.tournament-dates::selection,
+.tournament-number-of-teams::selection,
+.tournament-prize-pool::selection,
+.tournament br::selection,
+.tournament span::selection {
+    background: var(--gradient-color-1);
+    color: black;
+    transition: all 300ms ease-in-out;
+}
+
+.current-tournament-section {
+    width: 500px;
+    height: 270px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    transition: all 300ms ease-in-out;
+    z-index: inherit;
+    opacity: 0;
+}
+
+.c-t-s-wrapper {
+    margin-left: 25px;
+    width: 400px;
+    z-index: inherit;
+}
+
+.current-tournament-name,
+.tournament-name {
+    font-size: 24px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.current-tournament-details,
+.tournament-details {
+    padding-top: 15px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.tournament-details {
+    color: var(--gradient-color-1)
+}
+
+p.current-tournament-dates {
+    color: #ffcc40;
+}
+
+.current-tournament-info span {
+    font-weight: bolder;
+    background: -webkit-linear-gradient(var(--gradient-color-1), var(--gradient-color-3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.current-tournament-info span::selection {
+    background: -webkit-linear-gradient(var(--gradient-color-1), var(--gradient-color-3));
+    color: black;
+}
+
+p.current-tournament-dates span {
+    color: var(--gradient-color-1);
+}
+
+p.current-tournament-dates::selection,
+p.current-tournament-dates br::selection,
+p.current-tournament-dates span::selection {
+    background: var(--gradient-color-1);
+}
+
+p.current-tournament-number-of-teams {
+    color: var(--gradient-color-2);
+}
+
+p.current-tournament-number-of-teams span {
+    color: var(--gradient-color-2);
+}
+
+p.current-tournament-number-of-teams::selection,
+p.current-tournament-number-of-teams br::selection,
+p.current-tournament-number-of-teams span::selection {
+    background: var(--gradient-color-2);
+}
+
+p.current-tournament-prize-pool {
+    color: var(--gradient-color-3);
+}
+
+p.current-tournament-prize-pool span {
+    color: var(--gradient-color-3);
+}
+
+p.current-tournament-prize-pool::selection,
+p.current-tournament-prize-pool br::selection,
+p.current-tournament-prize-pool span::selection {
+    background: var(--gradient-color-3);
+}
+
+#add-user {
+    top: 600px;
+    margin-left: 33%;
+    width: 30%;
+    padding: 1rem;
+    position: relative;
+    padding: 3px;
+    z-index: inherit;
+    background: white;
+    box-shadow: 0 0 1em #fff;
+    transition: all 300ms ease-in-out;
+}
+
+#add-user-title {
+    position: absolute;
+    color: white;
+    margin-top: -75px;
+    background: none;
+}
+
+#add-user-title span {
+    font-size: 24px;
+    margin-top: -5px;
+    margin-left: 10px;
+    position: absolute;
+    transition: all 300ms ease;
+}
+
+form {
+    padding: 0px 60px 60px 60px;
+    max-width: 100%;
+    display: grid;
+    overflow: hidden;
+    background: 222;
+    color: white;
+}
+
+form div {
+    position: relative;
+    margin-top: 40px;   
+    background: 222;
+}
+
+.add-user input {
+    height: 35px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: 222;
+    cursor: text;
+    color: white;
+}
+
+.add-user label {
+    left: 0;
+    width: 100%;
+    display: block;
+    position: absolute;
+    pointer-events: none;
+    border-bottom: 1px solid #666;
+    background: white;
+    color: white;
+}
+
+.add-user input + label::after {
+    content: '';
+    opacity: 0;
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+    height: 100%;
+    width: 100%; 
+    transform: translateX(0%);
+    transition: all 300ms ease-in-out;
+}
+
+.add-user-input-label-1::after {
+    border-bottom: 2px solid var(--gradient-color-1);
+}
+
+.add-user-input-label-2::after {
+    border-bottom: 2px solid var(--gradient-color-2);
+}
+
+.add-user-input-label-3::after {
+    border-bottom: 2px solid var(--gradient-color-3);
+}
+
+.add-user input:focus + label::after, 
+.add-user input:valid + label::after {
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+    /*
+    animation: animate-input-borders 0.5s infinite;
+    */
+}
+
+#add-user:hover #add-user-title span {
+    margin-top: -45px;
+    transition: all 300ms ease;
+    font-size: 64px;
+}
+
+#add-user:focus-within {
+    background: -webkit-linear-gradient(var(--gradient-color-1), var(--gradient-color-3));
+    box-shadow: 0 0 2em var(--gradient-color-1);
+    transition: all 300ms ease-in-out;
+    z-index: 100;
+}
+
+.input-text-wrapper {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    transition: all 300ms linear;
+    background: 222;
+}
+
+.add-user input:focus + label .input-text-wrapper, 
+.add-user input:valid + label .input-text-wrapper {
+    opacity: 0;
+    transform: translateY(-160%);
+    transition: all 300ms ease-in-out;
+}
+
+#add-user button {
+    padding-top: 3px;
+    margin-top: 30px;
+    padding-bottom: 6px;
+    cursor: pointer;
+    background: #222;
+    border: 3px solid #222;
+    color: white;
+    transition: border 300ms linear;
+    
+    outline: none;
+}
+
+#add-user button:hover, 
+#add-user button:focus-visible {
+    border: 3px solid #fa9011;
+    transition: border 300ms linear;
+}
+
+.side-pictures {
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    margin-top: 30%;
+    width: 100%;
+    max-width: 100%;
+    z-index: 1;
+    background: none;
+}
+
+.pictures-top, .pictures-mid, .pictures-bot {
+    position: absolute;
+    background: none;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.picture-top-left {
+    margin-top: -1100px;
+    margin-left: -100px;
+    background: none;
+    z-index: inherit;
+}
+
+.picture-top-right {
+    margin-top: -1100px;
+    margin-left: 425px;
+    background: none;
+    z-index: inherit;
+}
+
+.picture-mid-left {
+    margin-top: -250px;
+    margin-left: 150px;
+    background: none;
+    z-index: inherit;
+}
+
+.picture-mid-left img {
+    height: 500px;
+}
+
+.picture-mid-right {
+    margin-top: -250px;
+    margin-left: 625px;
+    background: none;
+    z-index: inherit;
+}
+
+.picture-mid-right img {
+    height: 500px;
+}
+
+.picture-bot-left {
+    position: absolute;
+    margin-top: 350px;
+    margin-left: 175px;
+    transition: transform 300ms ease;
+}
+
+.picture-bot-left img {
+    outline: none;
+    background: transparent;
+    transform: translateX(0%);
+    opacity: 1;
+    transition: transform 300ms ease;
+    transition: opacity 300ms ease;
+}
+
+.picture-bot-mid {
+    position: absolute;
+    margin-top: 550px;
+    margin-left: 540px;
+}
+
+.picture-bot-mid img {
+    height: 300px;
+}
+
+.picture-bot-right {
+    position: absolute;
+    margin-top: 350px;
+    margin-left: 690px;
+    transition: transform 300ms ease;
+}
+
+.picture-bot-right img {
+    outline: none;
+    background: transparent;
+    transform: translateX(0%);
+    opacity: 1;
+    transition: transform 300ms ease;
+    transition: opacity 300ms ease;
+}
+
+.pictures-bot:hover .picture-bot-left{
+    transform: translateX(-15%);
+    opacity: 0;
+    transition: all 300ms ease;
+}
+
+.pictures-bot:hover .picture-bot-right{
+    transform: translateX(15%);
+    opacity: 0;
+    transition: all 300ms ease;
+}
+
+.about-aero-team {
+    display: flex;
+    position: absolute;
+    margin-top: 650px;
+    margin-left: 475px;
+}
+
+.aero-email span {
+    margin: 0px 50px;
+    color: white;
+    font-size: 44px;
+    transition: all 300ms ease;
+}
+
+.aero-email:hover span {
+    color: var(--gradient-color-3);
+    transition: all 300ms ease;
+}
+
+.aero-tg span {
+    margin: 0px 50px;
+    color: white;
+    font-size: 48px;
+    transition: all 300ms ease;
+}
+
+.aero-tg:hover span {
+    color: var(--gradient-color-3);
+    transition: all 300ms ease;
+}
+
+.aero-inst span {
+    margin: 0px 50px;
+    color: white;
+    font-size: 50px;
+    transition: all 300ms ease;
+}
+
+.aero-inst:hover span {
+    color: var(--gradient-color-3);
+    transition: all 300ms ease;
+}
+
+
+/*
+
+Animation for the form borders (changing gradient direction)
+
+@keyframes animate-form-borders {
+    0% {
+        background: linear-gradient(0deg, rgba(0,0,255,1) 0%, rgba(178,0,255,1) 50%, rgba(247,0,49,1) 100%);
+        box-shadow: 0.1em 0em purple, -0.1em 0em blue;
+    } 33% {
+        background: linear-gradient(90deg, rgba(0,0,255,1) 0%, rgba(178,0,255,1) 50%, rgba(247,0,49,1) 100%);
+        box-shadow: 0em 0.1em purple, 0em -0.1em blue;
+    } 66% {
+        background: linear-gradient(180deg, rgba(0,0,255,1) 0%, rgba(178,0,255,1) 50%, rgba(247,0,49,1) 100%);
+        box-shadow: -0.1em 0em purple, 0.1em 0em blue;
+    } 100% {
+        background: linear-gradient(270deg, rgba(0,0,255,1) 0%, rgba(178,0,255,1) 50%, rgba(247,0,49,1) 100%);
+        box-shadow: 0em -0.1em purple, 0em 0.1em blue;
+    }
+}
+*/
+
+/*
+
+Animation (changing color) for label:before
+
+@keyframes animate-input-borders {
+    0% {
+        border-bottom: 2px solid rgba(0,0,255,1);
+        box-shadow: 0 0 3em rgba(0,0,255,1);
+    } 50% {
+        border-bottom: 2px solid rgba(178,0,255,1);
+        box-shadow: 0 0 3em rgba(178,0,255,1);
+    } 100% {
+        border-bottom: 2px solid rgba(247,0,49,1);
+        box-shadow: 0 0 3em rgba(247,0,49,1);
+    }
+}
+*/
+
+@media only screen and (min-width : 1824px) {
+
+}
+
+@media only screen and (min-width : 1224px) {
+    #aero-logo {
+        margin-left: 200px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .tournaments-section {
+        margin-left: 32%;
+        max-width: 1000px;
+    }
+
+    .changeover {
+        margin-right: 50px;
+    }
+
+    .all-tournaments {
+        width: 900px;
+        grid-template-columns: 450px;
+        grid-template-rows: 300px 300px;
+    }
+
+    .current-tournament-section {
+        margin-top: 100px;
+        width: 900px;
+    }
+
+    .c-t-s-wrapper {
+        width: 425px;
+    }
+
+    #add-user {
+        margin-top: -100px;
+        margin-left: 38%;
+        width: 23%;
+    }
+    
+    .picture-top-left {
+        margin-top: -120%;
+        margin-left: 2%;
+        background: none;
+        z-index: inherit;
+    }
+    
+    .picture-top-right {
+        margin-top: -120%;
+        margin-left: 60%;
+        background: none;
+        z-index: inherit;
+    }
+
+    .picture-top-left img,
+    .picture-top-right img {
+        height: 500px;
+    }
+    
+    .picture-mid-left {
+        margin-top: -300px;
+        margin-left: 45%;
+        background: none;
+        z-index: inherit;
+    }
+    
+    .picture-mid-right {
+        margin-top: -300px;
+        margin-left: 110%;
+        background: none;
+        z-index: inherit;
+    }
+    
+    .picture-bot-left {
+        position: absolute;
+        margin-top: 500px;
+        margin-left: 175px;
+        transition: transform 300ms ease;
+    }
+    
+    .picture-bot-mid {
+        position: absolute;
+        margin-top: 700px;
+        margin-left: 540px;
+    }
+    
+    .picture-bot-right {
+        position: absolute;
+        margin-top: 500px;
+        margin-left: 690px;
+        transition: transform 300ms ease;
+    }
+
+    .about-aero-team {
+        display: flex;
+        position: absolute;
+        margin-top: 45%;
+        margin-left: 34.5%;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+}
+
+@media only screen and (max-width : 320px) {
+
+}
